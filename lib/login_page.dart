@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +23,7 @@ class LoginPage extends StatelessWidget {
                     width: 200, // Atur ukuran logo
                     height: 200,
                   ),
-                  SizedBox(height: 16), // Jarak antara logo dan kotak
+                  const SizedBox(height: 16), // Jarak antara logo dan kotak
                 ],
               ),
 
@@ -36,34 +38,34 @@ class LoginPage extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 2,
                       blurRadius: 5,
-                      offset: Offset(0, 3),
+                      offset: const Offset(0, 3),
                     ),
                   ],
                 ),
                 child: Column(
                   children: [
                     // Teks "HELLO" dan "Sign into Account"
-                    Center(
+                    const Center(
                       child: Text(
                         'HELLO',
                         style: TextStyle(
                             fontSize: 24, fontWeight: FontWeight.bold),
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Center(child: Text('Sign into Account')),
+                    const SizedBox(height: 4),
+                    const Center(child: Text('Sign into Account')),
 
                     // Input Fields
-                    SizedBox(height: 24),
-                    TextField(
+                    const SizedBox(height: 24),
+                    const TextField(
                       decoration: InputDecoration(
                         labelText: 'Username',
                         prefixIcon: Icon(Icons.person),
                         border: OutlineInputBorder(),
                       ),
                     ),
-                    SizedBox(height: 16),
-                    TextField(
+                    const SizedBox(height: 16),
+                    const TextField(
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: 'Password',
@@ -81,14 +83,14 @@ class LoginPage extends StatelessWidget {
                     // ),
 
                     // Login Button dengan lebar yang sama dengan TextField
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     SizedBox(
                       width: double.infinity, // Membuat tombol selebar TextField
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.orange),
-                        child: Text('Login'),
+                        child: const Text('Login'),
                       ),
                     ),
                   ],
@@ -96,16 +98,16 @@ class LoginPage extends StatelessWidget {
               ),
 
               // Register Now Section
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have an account? "),
+                  const Text("Don't have an account? "),
                   GestureDetector(
                     onTap: () {
                       Navigator.pushNamed(context, '/register');
                     },
-                    child: Text(
+                    child: const Text(
                       'Register Now',
                       style: TextStyle(color: Colors.orange),
                     ),

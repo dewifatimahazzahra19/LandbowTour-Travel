@@ -8,8 +8,13 @@ class RegisterPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Register'),
-        leading: const BackButton(),
-        backgroundColor: Colors.orange,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            // Kembali ke halaman Welcome
+            Navigator.pushReplacementNamed(context, '/welcome');
+          },
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -50,7 +55,9 @@ class RegisterPage extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, '/login');
+              },
               style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
               child: const Text('Register Now'),
             ),
@@ -82,7 +89,7 @@ class RegisterPage extends StatelessWidget {
                 const Text("Already have an account? "),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, '/login');
+                    Navigator.pushReplacementNamed(context, '/login');
                   },
                   child: const Text(
                     'Login Now',

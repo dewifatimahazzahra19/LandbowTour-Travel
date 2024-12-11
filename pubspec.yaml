@@ -13,12 +13,13 @@ environment:
 
 # Dependencies
 dependencies:
+
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
   provider: ^6.0.5 # State management
   http: ^1.1.0 # HTTP requests
-  url_launcher: ^6.1.10 # Open URLs
+  url_launcher: ^6.0.20 # Open URLs
 
 # Development dependencies
 dev_dependencies:
@@ -32,7 +33,25 @@ flutter:
 
   # Add asset directories
   assets:
-    - assets/images/
+    - assets/images/landbow.png
+    - assets/images/car1.jpg
+    - assets/images/car2.jpg
+    - assets/images/car3.jpg
+    - assets/images/car4.jpg
+    - assets/images/car5.jpg
+    - assets/images/recomendation2.jpg
+    - assets/images/recomendation1.jpg
+    - assets/images/recomendation3.jpg
+    - assets/images/recomendation4.jpg
+    - assets/images/recomendation5.jpg
+    - assets/images/explore.jpg
+    - assets/images/profil.jpg
+    - assets/images/promo.jpg
+    - assets/images/promo22.jpg
+    - assets/images/promo33.jpg
+  
+    
+
 
   # Fonts
   # fonts:
